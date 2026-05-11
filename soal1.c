@@ -5,6 +5,7 @@ int main(){
     int max = 0;
     int indeks = 0;
     int iso = 0;
+    int a=0;
     scanf("%d", &N);
     int m[N][N];
     for(int i=0; i<N; i++){
@@ -37,7 +38,11 @@ int main(){
             }
         }
         if(jumlah==0){
-            printf("ISOLATED %d\n", i);
+            if(a==0){
+                printf("ISOLATED");
+                a = 1;
+            }
+            printf(" %d", i);
             iso++;
         }
         jumlah = 0;
